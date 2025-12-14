@@ -33,219 +33,181 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="steps" className="py-16 px-4">
-        <div className="max-w-5xl mx-auto space-y-12">
-          <div className="flex flex-col md:flex-row gap-8 items-start animate-fade-in">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <Icon name="Users" size={36} className="text-primary" />
-              </div>
-            </div>
-            
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Badge variant="secondary" className="text-lg px-4 py-1">Шаг 1</Badge>
-                <h2 className="text-3xl font-bold text-foreground">Определите, кто отвечает</h2>
-              </div>
-              
-              <div className="space-y-4">
-                <Card className="border-l-4 border-l-primary hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <Icon name="Building2" size={24} className="text-primary mt-1" />
-                      <div>
-                        <h3 className="font-semibold text-lg mb-1">УК/ТСЖ</h3>
-                        <p className="text-muted-foreground">За двор и контейнерную площадку</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-l-4 border-l-secondary hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <Icon name="Truck" size={24} className="text-secondary mt-1" />
-                      <div>
-                        <h3 className="font-semibold text-lg mb-1">Региональный оператор</h3>
-                        <p className="text-muted-foreground">За вывоз ТКО</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-l-4 border-l-accent hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <Icon name="Phone" size={24} className="text-primary mt-1" />
-                      <div>
-                        <h3 className="font-semibold text-lg mb-1">Администрация района/горячая линия</h3>
-                        <p className="text-muted-foreground">Если не помогает выше</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
+      <section id="steps" className="py-16 px-4 bg-gradient-to-b from-background to-accent/10">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 animate-fade-in">
+            <h2 className="text-4xl font-bold text-foreground mb-4">5 шагов к решению проблемы</h2>
+            <p className="text-lg text-muted-foreground">Следуйте инструкции, чтобы добиться результата</p>
           </div>
-
-          <div className="flex flex-col md:flex-row gap-8 items-start animate-fade-in">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center">
-                <Icon name="FileText" size={36} className="text-secondary" />
-              </div>
-            </div>
-            
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Badge variant="secondary" className="text-lg px-4 py-1">Шаг 2</Badge>
-                <h2 className="text-3xl font-bold text-foreground">Описание проблемы</h2>
-              </div>
-              
-              <Card className="bg-gradient-to-br from-white to-accent/30">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-start gap-3">
-                    <Icon name="MapPin" size={20} className="text-primary mt-1" />
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in bg-gradient-to-br from-white to-primary/5">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Icon name="Users" size={32} className="text-primary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">Шаг 1</Badge>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Определите, кто отвечает</h3>
+                
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+                    <Icon name="Building2" size={20} className="text-primary mt-0.5 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Адрес и точное место контейнеров</h4>
-                      <p className="text-sm text-muted-foreground">Укажите улицу, дом, номер подъезда или двора</p>
+                      <p className="font-semibold text-sm">УК/ТСЖ</p>
+                      <p className="text-xs text-muted-foreground">За двор и контейнеры</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+                    <Icon name="Truck" size={20} className="text-secondary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Региональный оператор</p>
+                      <p className="text-xs text-muted-foreground">За вывоз ТКО</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white/60 rounded-lg">
+                    <Icon name="Phone" size={20} className="text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm">Администрация</p>
+                      <p className="text-xs text-muted-foreground">Если не помогло</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in bg-gradient-to-br from-white to-secondary/5">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6">
+                  <Icon name="FileText" size={32} className="text-secondary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">Шаг 2</Badge>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Опишите проблему</h3>
+                
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Icon name="MapPin" size={18} className="text-primary mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-sm mb-1">Адрес</p>
+                      <p className="text-xs text-muted-foreground">Точное место контейнеров</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <Icon name="AlertTriangle" size={20} className="text-primary mt-1" />
+                    <Icon name="AlertTriangle" size={18} className="text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">В чём проблема</h4>
-                      <p className="text-sm text-muted-foreground">Не вывозят, переполнены, нет контейнеров и т.д.</p>
+                      <p className="font-semibold text-sm mb-1">Суть проблемы</p>
+                      <p className="text-xs text-muted-foreground">Не вывозят, переполнены</p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-3">
-                    <Icon name="Calendar" size={20} className="text-primary mt-1" />
+                    <Icon name="Calendar" size={18} className="text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Сколько времени это длится</h4>
-                      <p className="text-sm text-muted-foreground">Укажите дату начала проблемы</p>
+                      <p className="font-semibold text-sm mb-1">Сроки</p>
+                      <p className="text-xs text-muted-foreground">Когда началось</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+                </div>
+              </CardContent>
+            </Card>
 
-          <div className="flex flex-col md:flex-row gap-8 items-start animate-fade-in">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <Icon name="Camera" size={36} className="text-primary" />
-              </div>
-            </div>
-            
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Badge variant="secondary" className="text-lg px-4 py-1">Шаг 3</Badge>
-                <h2 className="text-3xl font-bold text-foreground">Приложите доказательства</h2>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-4">
-                <Card className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <Icon name="Image" size={32} className="text-primary mb-3" />
-                    <h3 className="font-semibold text-lg mb-2">Фото/видео переполненных баков</h3>
-                    <p className="text-sm text-muted-foreground">Сделайте несколько ракурсов для полной картины</p>
-                  </CardContent>
-                </Card>
+            <Card className="hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in bg-gradient-to-br from-white to-primary/5">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Icon name="Camera" size={32} className="text-primary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">Шаг 3</Badge>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Приложите доказательства</h3>
                 
-                <Card className="hover:shadow-md transition-shadow">
-                  <CardContent className="p-6">
-                    <Icon name="Clock" size={32} className="text-primary mb-3" />
-                    <h3 className="font-semibold text-lg mb-2">Дата и время съёмки</h3>
-                    <p className="text-sm text-muted-foreground">Зафиксируйте, когда именно сделали фото</p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="hover:shadow-md transition-shadow md:col-span-2">
-                  <CardContent className="p-6">
-                    <Icon name="Archive" size={32} className="text-primary mb-3" />
-                    <h3 className="font-semibold text-lg mb-2">Ответы на прошлые обращения</h3>
-                    <p className="text-sm text-muted-foreground">Если уже обращались ранее, приложите предыдущую переписку</p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-8 items-start animate-fade-in">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 rounded-2xl bg-secondary/10 flex items-center justify-center">
-                <Icon name="ClipboardCheck" size={36} className="text-secondary" />
-              </div>
-            </div>
-            
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Badge variant="secondary" className="text-lg px-4 py-1">Шаг 4</Badge>
-                <h2 className="text-3xl font-bold text-foreground">Фиксируйте каждый шаг</h2>
-              </div>
-              
-              <Card className="bg-gradient-to-br from-white to-secondary/10">
-                <CardContent className="p-6 space-y-4">
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">1</span>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <Icon name="Image" size={18} className="text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Сохраняйте номер заявки или входящий номер</h4>
-                      <p className="text-sm text-muted-foreground">Это ваше главное доказательство обращения</p>
+                      <p className="font-semibold text-sm mb-1">Фото/видео</p>
+                      <p className="text-xs text-muted-foreground">Переполненные баки</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">2</span>
-                    </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="Clock" size={18} className="text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Записывайте дату и кто принял обращение</h4>
-                      <p className="text-sm text-muted-foreground">ФИО сотрудника, время звонка или отправки</p>
+                      <p className="font-semibold text-sm mb-1">Дата и время</p>
+                      <p className="text-xs text-muted-foreground">Когда сделали фото</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold text-sm">3</span>
-                    </div>
+                  <div className="flex items-start gap-3">
+                    <Icon name="Archive" size={18} className="text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold mb-1">Если сроки нарушены — жалоба уровнем выше</h4>
-                      <p className="text-sm text-muted-foreground">Обращайтесь в надзорные органы с копиями предыдущих обращений</p>
+                      <p className="font-semibold text-sm mb-1">Прошлые ответы</p>
+                      <p className="text-xs text-muted-foreground">Если обращались ранее</p>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+                </div>
+              </CardContent>
+            </Card>
 
-          <div className="flex flex-col md:flex-row gap-8 items-start animate-fade-in">
-            <div className="flex-shrink-0">
-              <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center">
-                <Icon name="MessageCircle" size={36} className="text-primary" />
-              </div>
-            </div>
-            
-            <div className="flex-1">
-              <div className="flex items-center gap-3 mb-4">
-                <Badge variant="secondary" className="text-lg px-4 py-1">Шаг 5</Badge>
-                <h2 className="text-3xl font-bold text-foreground">Пишите спокойно, но по делу</h2>
-              </div>
-              
-              <Card className="bg-gradient-to-br from-primary/5 to-accent/20 border-2 border-primary/20">
-                <CardContent className="p-8 text-center">
-                  <Icon name="Lightbulb" size={48} className="text-primary mx-auto mb-4" />
-                  <p className="text-lg font-medium text-foreground mb-2">
-                    Факты + фото работают лучше, чем эмоции
-                  </p>
-                  <p className="text-muted-foreground">
-                    Чем точнее жалоба, тем выше шанс, что мусор начнут вывозить вовремя
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in bg-gradient-to-br from-white to-secondary/5">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6">
+                  <Icon name="ClipboardCheck" size={32} className="text-secondary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">Шаг 4</Badge>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Фиксируйте всё</h3>
+                
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-xs">1</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium">Номер заявки</p>
+                      <p className="text-xs text-muted-foreground">Главное доказательство</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-xs">2</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium">Дата и ФИО</p>
+                      <p className="text-xs text-muted-foreground">Кто принял обращение</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                      <span className="text-white font-bold text-xs">3</span>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium">Сроки нарушены?</p>
+                      <p className="text-xs text-muted-foreground">Жалоба выше</p>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-xl transition-all hover:-translate-y-1 animate-fade-in bg-gradient-to-br from-primary/5 to-accent/20 border-2 border-primary/20 md:col-span-2 lg:col-span-1">
+              <CardContent className="p-8 flex flex-col items-center text-center h-full justify-center">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Icon name="MessageCircle" size={32} className="text-primary" />
+                </div>
+                <Badge variant="secondary" className="mb-3">Шаг 5</Badge>
+                <h3 className="text-2xl font-bold text-foreground mb-4">Пишите спокойно</h3>
+                
+                <Icon name="Lightbulb" size={40} className="text-primary mb-4" />
+                <p className="text-base font-semibold text-foreground mb-2">
+                  Факты + фото работают лучше эмоций
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Чем точнее жалоба, тем выше шанс решения
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
